@@ -2,6 +2,35 @@
 
 ---
 
+## v0.2.7 — 2026-03-23
+
+Patch release focused on endpoint configurability and deployment cleanup.
+
+### What's new
+- Added INI-configurable OSC endpoint (host + port) in plugin startup path
+- Default remains `127.0.0.1:9000` when no INI exists
+- Added packaged config template: `Send_to_OSC.ini.example`
+
+### Configuration
+Create `Send_to_OSC.ini` in your VirtualDJ Plugins64 folder:
+
+```ini
+[osc]
+host=127.0.0.1
+port=9000
+```
+
+The plugin checks sidecar INI next to loaded DLL first, then global Plugins64 INI.
+
+### Included artifacts
+- `Send_to_OSC.dll`
+- `Send_to_OSC.ini.example`
+- `bridge_server.py`
+- `visualizer/index.html`, `visualizer/sketch.js`, `visualizer/style.css`
+- `RELEASE_NOTES.md`
+
+---
+
 ## v0.2.6 — 2026-03-23
 
 First public release of Send_to_OSC.

@@ -4,8 +4,8 @@ This repo hosts compiled releases of **Send_to_OSC**, a VirtualDJ native plugin 
 
 ## Latest Release
 
-**[v0.2.6](https://github.com/fitzgr/send_to_osc_releases/releases/tag/v0.2.6)** — 2026-03-23  
-First public release. Plugin DLL + Python bridge + p5.js visualizer.
+**[v0.2.7](https://github.com/fitzgr/send_to_osc_releases/releases/tag/v0.2.7)** — 2026-03-23  
+Adds INI-configurable OSC host/port (`Send_to_OSC.ini`) and updated plugin build.
 
 ## Installation
 
@@ -15,6 +15,16 @@ First public release. Plugin DLL + Python bridge + p5.js visualizer.
 3. Restart VirtualDJ
 4. Load **Send_to_OSC** as an effect on the MASTER channel
 5. The plugin broadcasts OSC to `127.0.0.1:9000` on every beat
+
+Optional endpoint override:
+
+- `C:\Users\<you>\Documents\VirtualDJ\Plugins64\Send_to_OSC.ini`
+
+```ini
+[osc]
+host=127.0.0.1
+port=9000
+```
 
 ## Bridge Server (optional)
 
